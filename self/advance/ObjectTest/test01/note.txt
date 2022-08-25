@@ -1,0 +1,21 @@
+JDK类库的跟类：Object
+
+这个老祖宗类中的方法需要先研究一下，因为这些方法都是所有子类通用的。任何一个类默认继承Object。就算没有直接继承，最终也会间接继承。
+
+Object中有哪些常用的方法呢？
+    我们去哪里找这些方法呢？
+        第一种方法：去源代码当中。（但是这种方式比较麻烦，源代码也比较难）
+        第二种方法：去查阅java的类库的帮助文档。
+
+    什么是API？
+        应用程序编程接口
+        整个JDK的类库就是一个javase的API
+        每一个API都会配置一套API帮助文档
+        SUN公司提前写好的类库就是API（一般每份API多会对应一份API帮助文档）
+
+    目前为止只需要知道这几个方法：
+        protected Object clone() //负责对象克隆
+        boolean equals(Object obj)  //判断两个对象是否相等
+        protected void finalize() //将对象转换成字符串形式
+        int hashCode() //获取对象哈希值
+        String toString() //垃圾回收器负责调用的方法
