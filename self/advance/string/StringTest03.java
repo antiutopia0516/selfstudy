@@ -43,6 +43,66 @@ public class StringTest03 {
         //9、 int lastIndexOf(String str)
         //判断某个字符串在当前字符串中最后一次出现的索引
         System.out.println("oraclejavac++javaoreaclec++".lastIndexOf("java")); 
+        
+        // replace(char oldChar, char newChar)
+        // replace(CharSequence target, CharSequence replacement)
+        // String的父接口就是：CharSequence
+        //替换
+        String str = "http://www.baidu.com".replace("http:", "https:");
+        System.out.println(str);
+        //把以下字符串的等号替换成冒号
+        String str1 = "name=zhangsan&password=123age=20".replace("=", ":");
+        System.out.println(str1);
+
+        // split(String regex)
+        // 拆分字符串
+        String[] ymd = "1980-10-11".split("-");//将这个字符串以”-“进行拆分
+        for(int i = 0; i < ymd.length; i++){
+            System.out.println(ymd[i]);
+        }
+
+        // startsWith(String prefix)
+        // 判断某个字符串是否以某个子字符串开始
+        System.out.println("test.txt".startsWith("test"));
+        System.out.println("test.txt".startsWith(".txt"));
+
+        // substring(int beginIndex, int endIndex)
+        // 截取字符串
+        //beginIndex(包括)
+        //endIndex(不包括)
+        System.out.println("www.baidu.com".substring(4));
+        System.out.println("www.baidu.com".substring(4, 9));
+
+        // char[] = toCharArray()
+        // 将字符串转换成char数组
+        char[] chars = "我是中国人".toCharArray();
+        for(int i = 0; i < chars.length; i++){
+            System.out.println(chars[i]);
+        }
+
+        // String toLowerCase()
+        // 转换为小写
+        System.out.println("AbCBHDCCdsdjcnD".toLowerCase());
+
+        // String toUpperCase()
+        // 转换为大写
+        System.out.println("asdhuCHUDhcudsc".toUpperCase());
+
+        // trim()
+        // 去除字符串前后空白
+        System.out.println("         hello            world      ".trim());//hello            world
+
+        // String中只有一个方法是静态的，不需要new对象
+        // 将非字符串转换成字符串
+        // valueOf
+        String s1 = String.valueOf(true);
+        String s2 = String.valueOf(3.14);
+        System.out.println(s1 + s2);
+
+        //println源代码
+        //本质上System.out.println（）这个方法在输出任何数据的时候都是先转换成字符串，再输出
+        System.out.println(100);
+        
     }
     
 }
